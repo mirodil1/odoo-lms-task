@@ -1,32 +1,44 @@
-[![Build Status](https://runbot.odoo.com/runbot/badge/flat/1/master.svg)](https://runbot.odoo.com/runbot)
-[![Tech Doc](https://img.shields.io/badge/master-docs-875A7B.svg?style=flat&colorA=8F8F8F)](https://www.odoo.com/documentation/17.0)
-[![Help](https://img.shields.io/badge/master-help-875A7B.svg?style=flat&colorA=8F8F8F)](https://www.odoo.com/forum/help-1)
-[![Nightly Builds](https://img.shields.io/badge/master-nightly-875A7B.svg?style=flat&colorA=8F8F8F)](https://nightly.odoo.com/)
+# Odoo Custom Modules
 
-Odoo
-----
+This repository contains custom modules for managing learning center system, including teachers, students, payments, groups, and courses.
 
-Odoo is a suite of web based open source business apps.
+## Modules Included
 
-The main Odoo Apps include an <a href="https://www.odoo.com/page/crm">Open Source CRM</a>,
-<a href="https://www.odoo.com/app/website">Website Builder</a>,
-<a href="https://www.odoo.com/app/ecommerce">eCommerce</a>,
-<a href="https://www.odoo.com/app/inventory">Warehouse Management</a>,
-<a href="https://www.odoo.com/app/project">Project Management</a>,
-<a href="https://www.odoo.com/app/accounting">Billing &amp; Accounting</a>,
-<a href="https://www.odoo.com/app/point-of-sale-shop">Point of Sale</a>,
-<a href="https://www.odoo.com/app/employees">Human Resources</a>,
-<a href="https://www.odoo.com/app/social-marketing">Marketing</a>,
-<a href="https://www.odoo.com/app/manufacturing">Manufacturing</a>,
-<a href="https://www.odoo.com/">...</a>
+- **Teacher**: Manages teacher information.
+- **Student**: Handles student records.
+- **Payments**: Manages payment transactions and history.
+- **Group**: Organizes students and teachers into groups.
+- **Course**: Manages course information.
 
-Odoo Apps can be used as stand-alone applications, but they also integrate seamlessly so you get
-a full-featured <a href="https://www.odoo.com">Open Source ERP</a> when you install several Apps.
+## Getting Started
 
-Getting started with Odoo
--------------------------
+### Prerequisites
 
-For a standard installation please follow the <a href="https://www.odoo.com/documentation/17.0/administration/install/install.html">Setup instructions</a>
-from the documentation.
+- Python 3.10
+- Odoo 17.0
+- PostgreSQL
 
-To learn the software, we recommend the <a href="https://www.odoo.com/slides">Odoo eLearning</a>, or <a href="https://www.odoo.com/page/scale-up-business-game">Scale-up</a>, the <a href="https://www.odoo.com/page/scale-up-business-game">business game</a>. Developers can start with <a href="https://www.odoo.com/documentation/17.0/developer/howtos.html">the developer tutorials</a>
+### Installation
+
+1. **Clone the Repository**
+
+   ```bash
+   git clone https://github.com/mirodil1/odoo-lms-task.git
+   cd odoo-lms-task
+   ```
+2. **Install Dependencies**
+   ```bash
+   pip install -r requirements.txt
+   ```
+3. **Running locally**
+    ```bash
+    python3 odoo-bin --addons-path=addons,odoo/addons,project_addons
+
+### Initial Setup
+
+Upon first-time setup, activate all custom modules by navigating to the Odoo Apps menu and installing them. This will ensure all modules are properly loaded and configured.
+
+
+### User Roles
+
+Roles and permissions for users can be controlled when creating or managing users within the Odoo interface. Assign appropriate roles to users to grant access to different functionalities provided by the custom modules.

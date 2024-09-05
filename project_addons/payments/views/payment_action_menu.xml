@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="action_student_payment" model="ir.actions.act_window">
+        <field name="name">Payments</field>
+        <field name="res_model">student.payment</field>
+        <field name="view_mode">tree,form</field>
+        <field name="view_id" ref="view_student_payment_tree"/>
+        <!-- <field name="search_view_id" ref="view_course_search"/> -->
+    </record>
+
+    <record id="action_teacher_payment" model="ir.actions.act_window">
+        <field name="name">Payments</field>
+        <field name="res_model">teacher.payment</field>
+        <field name="view_mode">tree,form,graph</field>
+        <field name="view_id" ref="view_teacher_payment_tree"/>
+        <!-- <field name="search_view_id" ref="view_course_search"/> -->
+    </record>
+
+    <menuitem id="menu_payment_root" name="Payments"/>
+    <menuitem 
+        id="menu_student" 
+        name="Student Payment List" 
+        parent="menu_payment_root" 
+        action="action_student_payment"/>
+    <menuitem
+        id="menu_teacher"
+        name="Teacher Payment List"
+        parent="menu_payment_root"
+        action="action_teacher_payment"/>
+</odoo>

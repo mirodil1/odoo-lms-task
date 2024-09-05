@@ -11,6 +11,17 @@
                         <field name="last_name"/>
                         <field name="phone_number"/>
                     </group>
+                    <!-- <notebook>
+                        <page string="Payments">
+                            <field name="payment_ids">
+                                <tree>
+                                    <field name="name"/>
+                                    <field name="amount"/>
+                                    <field name="comment"/>
+                                </tree>
+                            </field>
+                        </page>
+                    </notebook> -->
                 </sheet>
             </form>
         </field>

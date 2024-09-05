@@ -1,0 +1,77 @@
+<odoo>
+    <record id="view_student_payment_tree" model="ir.ui.view">
+        <field name="name">student.payment.tree</field>
+        <field name="model">student.payment</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="student_id"/>
+                <field name="amount"/>
+                <field name="comment"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_student_payment_form" model="ir.ui.view">
+        <field name="name">student.payment.form</field>
+        <field name="model">student.payment</field>
+        <field name="arch" type="xml">
+            <form>
+                <!-- <header>
+                    <button name="action_confirm" type="object" string="Confirm" class="oe_highlight"/>
+                    <button name="action_cancel" type="object" string="Cancel" class="oe_link"/>
+                </header> -->
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="student_id"/>
+                        <field name="group_id"/>
+                        <field name="amount"/>
+                        <field name="comment"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_teacher_payment_tree" model="ir.ui.view">
+        <field name="name">teacher.payment.tree</field>
+        <field name="model">teacher.payment</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="teacher_id"/>
+                <field name="amount"/>
+                <field name="comment"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_teacher_payment_form" model="ir.ui.view">
+        <field name="name">teacher.payment.form</field>
+        <field name="model">teacher.payment</field>
+        <field name="arch" type="xml">
+            <form>
+                <!-- <header>
+                    <button name="action_confirm" type="object" string="Confirm" class="oe_highlight"/>
+                    <button name="action_cancel" type="object" string="Cancel" class="oe_link"/>
+                </header> -->
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="teacher_id"/>
+                        <field name="amount"/>
+                        <field name="comment"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+<!-- 
+    <menuitem id="menu_student_payment_root" name="Student Payments"/>
+    <menuitem id="menu_student_payment" name="Student Payments" parent="menu_student_payment_root"/>
+    <menuitem id="menu_teacher_payment" name="Teacher Payments" parent="menu_student_payment_root"/>
+
+    <act_window id="action_student_payment" name="Student Payments" res_model="student.payment" view_mode="tree,form" menu_id="menu_student_payment"/>
+    <act_window id="action_teacher_payment" name="Teacher Payments" res_model="teacher.payment" view_mode="tree,form" menu_id="menu_teacher_payment"/> -->
+</odoo>
